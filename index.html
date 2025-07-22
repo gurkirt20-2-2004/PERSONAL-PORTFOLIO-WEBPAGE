@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gurkirt Singh | Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header id="home">
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">Gurkirt Singh</div>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="toggle-btn" id="toggle-btn">&#9776;</div>
+            </div>
+        </nav>
+        <div class="hero">
+            <h1>Hi, I'm Gurkirt Singh</h1>
+            <p>Developer | Tech Enthusiast | Learner</p>
+            <a href="#projects" class="cta-button">View My Work</a>
+        </div>
+    </header>
+
+    <section id="about" class="section">
+        <div class="container">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <img src="profile.jpg" alt="Gurkirt Singh" class="profile-pic" />
+                <p>I am a passionate developer currently learning and building projects in web development, focusing on full-stack JavaScript and real-world problem-solving. I enjoy creating intuitive and responsive web applications that help people and improve everyday experiences.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section">
+        <div class="container">
+            <h2>Projects</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <img src="project1.png" alt="Real-Time Chat App">
+                    <h3>Real-Time Chat App</h3>
+                    <p>A real-time chat application using Node.js, Express, and Socket.io with clean UI.</p>
+                    <a href="#">View Project</a>
+                </div>
+                <div class="project-card">
+                    <img src="project2.png" alt="Quiz Web App">
+                    <h3>Quiz Web App</h3>
+                    <p>An interactive quiz application with a timer and instant result system built with React.</p>
+                    <a href="#">View Project</a>
+                </div>
+                <div class="project-card">
+                    <img src="project3.png" alt="Weather App">
+                    <h3>Weather App</h3>
+                    <p>Weather forecasting application using OpenWeather API with dynamic search functionality.</p>
+                    <a href="#">View Project</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="section">
+        <div class="container">
+            <h2>Skills</h2>
+            <div class="skills-grid">
+                <div class="skill">HTML5</div>
+                <div class="skill">CSS3</div>
+                <div class="skill">JavaScript</div>
+                <div class="skill">React</div>
+                <div class="skill">Node.js</div>
+                <div class="skill">MongoDB</div>
+                <div class="skill">Git</div>
+                <div class="skill">Express</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <div class="container">
+            <h2>Contact</h2>
+            <form id="contact-form">
+                <input type="text" placeholder="Your Name" required />
+                <input type="email" placeholder="Your Email" required />
+                <textarea placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Gurkirt Singh. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const toggleBtn = document.getElementById('toggle-btn');
+        const navLinks = document.querySelector('.nav-links');
+        toggleBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message!');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
